@@ -17,9 +17,9 @@ import java.sql.ResultSet;
  * @author Admin
  */
 public class ConnectDB {
-    private static String DB_URL = "jdbc:mysql://localhost:3306/quan_Ly_khach_san";
+    private static String DB_URL = "jdbc:mysql://160.250.247.172:3306/quan_ly_khach_san";
     private static String USER_NAME = "root"; // tên người dùng DB
-    private static String PASSWORD = "123456";
+    private static String PASSWORD = "devmoivaonghe203";
     
     
     public static Connection getConnection() {

@@ -18,14 +18,14 @@ import utils.Common;
  *
  * @author Admin
  */
-public class QuanLyNguoiDung extends javax.swing.JFrame {
+public class QuanLyNhanVien extends javax.swing.JFrame {
     private  Integer IdNhanVien = null;
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(QuanLyNguoiDung.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(QuanLyNhanVien.class.getName());
 
     /**
      * Creates new form QuanLyNguoiDung
      */
-    public QuanLyNguoiDung() throws SQLException {
+    public QuanLyNhanVien() throws SQLException {
         initComponents();
         loadDatas("");
     }
@@ -324,14 +324,14 @@ public class QuanLyNguoiDung extends javax.swing.JFrame {
                 "Thêm người dùng thật bại",
                 "Inane warning",
                 JOptionPane.ERROR_MESSAGE);
-            System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } catch(Exception ex) {
             // Bắt lỗi chung
               JOptionPane.showMessageDialog(this, // this -> from của mình
                 "Thêm người dùng thật bại", // message
                 "Cảnh báo", // title message
                 JOptionPane.ERROR_MESSAGE);// type error(icon)
-            System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }
         
     }//GEN-LAST:event_btnThemActionPerformed
@@ -341,7 +341,7 @@ public class QuanLyNguoiDung extends javax.swing.JFrame {
             // TODO add your handling code here:
             loadDatas(txtTimKiem.getText());
         } catch (SQLException ex) {
-            System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }
     }//GEN-LAST:event_btnTimKiem1ActionPerformed
 
@@ -392,14 +392,14 @@ public class QuanLyNguoiDung extends javax.swing.JFrame {
                 "Cập nhật dùng thật bại",
                 "Inane warning",
                 JOptionPane.ERROR_MESSAGE);
-            System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } catch(Exception ex) {
             // Bắt lỗi chung
               JOptionPane.showMessageDialog(this, // this -> from của mình
                 "Cập nhật dùng thật bại", // message
                 "Cảnh báo", // title message
                 JOptionPane.ERROR_MESSAGE);// type error(icon)
-            System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }
         
     }//GEN-LAST:event_btnSuaActionPerformed
@@ -431,7 +431,7 @@ public class QuanLyNguoiDung extends javax.swing.JFrame {
                 "Xoá người dùng thật bại",
                 "Inane warning",
                 JOptionPane.ERROR_MESSAGE);
-                System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+                System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
             }
         }else {
               JOptionPane.showMessageDialog(this, // this -> from của mình
@@ -490,9 +490,9 @@ public class QuanLyNguoiDung extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             try {
-                new QuanLyNguoiDung().setVisible(true);
+                new QuanLyNhanVien().setVisible(true);
             } catch (SQLException ex) {
-                System.getLogger(QuanLyNguoiDung.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+                System.getLogger(QuanLyNhanVien.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
             }
         });
     }

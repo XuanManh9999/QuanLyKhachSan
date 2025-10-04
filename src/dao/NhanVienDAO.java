@@ -65,7 +65,7 @@ public class NhanVienDAO {
     
      public static boolean createNhanVien(NhanVien nhanvien) throws SQLException {
         Connection db = ConnectDB.getConnection();
-        String sql = "INSERT INTO quan_Ly_khach_san.nhan_vien (ho_ten, dia_chi, gioi_tinh, ngay_sinh, so_cmnd, ngay_vao_lam) VALUES(?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO nhan_vien (ho_ten, dia_chi, gioi_tinh, ngay_sinh, so_cmnd, ngay_vao_lam) VALUES(?, ?, ?, ?, ?, ?);";
         PreparedStatement p =  db.prepareStatement(sql);
         p.setString(1, nhanvien.getHo_ten());
         p.setString(2, nhanvien.getDia_chi());
@@ -89,7 +89,7 @@ public class NhanVienDAO {
      
      public static boolean updateNhanVien(NhanVien nhanvien) throws SQLException {
         Connection db = ConnectDB.getConnection();
-        String sql = "UPDATE quan_Ly_khach_san.nhan_vien SET ho_ten=?, dia_chi=?, gioi_tinh=?, ngay_sinh=?, so_cmnd=?, ngay_vao_lam=? WHERE id=?;";
+        String sql = "UPDATE nhan_vien SET ho_ten=?, dia_chi=?, gioi_tinh=?, ngay_sinh=?, so_cmnd=?, ngay_vao_lam=? WHERE id=?;";
         PreparedStatement p =  db.prepareStatement(sql);
         p.setString(1, nhanvien.getHo_ten());
         p.setString(2, nhanvien.getDia_chi());
