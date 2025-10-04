@@ -60,8 +60,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="txtSoCmnd" min="-2" pref="192" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel6" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="txtDiaChi" min="-2" pref="192" max="-2" attributes="0"/>
@@ -74,7 +73,6 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtNgayVaoLam" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="btnSua" min="-2" pref="86" max="-2" attributes="0"/>
@@ -88,12 +86,14 @@
               </Group>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="365" max="-2" attributes="0"/>
               <Component id="txtTimKiem" min="-2" pref="192" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnTimKiem1" min="-2" pref="84" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnReset" min="-2" pref="84" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -120,8 +120,6 @@
                   <Component id="txtNgaySinh" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtSoCmnd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNgayVaoLam" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -134,6 +132,7 @@
                   <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtTimKiem" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTimKiem1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="236" max="-2" attributes="0"/>
@@ -161,14 +160,15 @@
         <Component class="javax.swing.JTable" name="JTableNhanVien">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="0">
+              <Table columnCount="8" rowCount="0">
                 <Column editable="true" title="Id" type="java.lang.Object"/>
                 <Column editable="true" title="H&#x1ecd; t&#xea;n" type="java.lang.Object"/>
                 <Column editable="true" title="&#x110;&#x1ecb;a ch&#x1ec9;" type="java.lang.Object"/>
                 <Column editable="true" title="Gi&#x1edb;i t&#xed;nh" type="java.lang.Object"/>
                 <Column editable="true" title="Ng&#xe0;y sinh" type="java.lang.Object"/>
                 <Column editable="true" title="S&#x1ed1; CMND" type="java.lang.Object"/>
-                <Column editable="false" title="Ng&#xe0;y v&#xe0;o l&#xe0;m" type="java.lang.Object"/>
+                <Column editable="false" title="Ng&#xe0;y th&#xea;m" type="java.lang.Object"/>
+                <Column editable="true" title="Ng&#xe0;y c&#x1ead;p nh&#x1ead;t" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>
@@ -205,13 +205,6 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a ch&#x1ec9;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtNgayVaoLam">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ng&#xe0;y v&#xe0;o l&#xe0;m"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboGioiTinh">
@@ -274,6 +267,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Gi&#x1edb;i t&#xed;nh"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tr&#x1edf; l&#x1ea1;i"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

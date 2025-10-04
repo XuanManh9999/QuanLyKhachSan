@@ -5,7 +5,7 @@
 package model;
 
 import java.util.Date;
-
+import java.sql.Timestamp;
 /**
  *
  * @author Admin
@@ -19,7 +19,9 @@ public class NhanVien {
     private String gioi_tinh;
     private Date ngay_sinh;
     private String so_cmnd;
-    private Date ngay_vao_lam;
+    // model/NhanVien.java
+    private java.sql.Timestamp ngay_them;
+    private java.sql.Timestamp ngay_cap_nhat;
 
     public Integer getId() {
         return id;
@@ -69,13 +71,12 @@ public class NhanVien {
         this.so_cmnd = so_cmnd;
     }
 
-    public Date getNgay_vao_lam() {
-        return ngay_vao_lam;
-    }
+   public Timestamp getNgay_them() { return ngay_them; }
+    public void setNgay_them(Timestamp t) { this.ngay_them = t; }
 
-    public void setNgay_vao_lam(Date ngay_vao_lam) {
-        this.ngay_vao_lam = ngay_vao_lam;
-    }
+    public Timestamp getNgay_cap_nhat() { return ngay_cap_nhat; }
+    public void setNgay_cap_nhat(Timestamp t) { this.ngay_cap_nhat = t; }
+   
     
     
 }

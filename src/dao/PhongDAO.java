@@ -22,6 +22,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import model.NhanVienPhong;
 import model.Phong;
+import java.sql.Timestamp;
+
 public class PhongDAO {
     public static List<Phong> getAllPhong(String searchByName, String trang_thai_phong) throws SQLException {
         System.out.println(searchByName);
@@ -52,8 +54,8 @@ public class PhongDAO {
                 phong.setGia_phong(datas.getFloat("gia_phong"));
                 phong.setMo_ta(datas.getString("mo_ta"));
                 phong.setTen_phong(datas.getString("ten_phong"));
-                phong.setNgay_them(datas.getDate("ngay_them"));
-                phong.setNgay_cap_nhat(datas.getDate("ngay_cap_nhat"));
+                phong.setNgay_them(datas.getTimestamp("ngay_them"));
+                phong.setNgay_cap_nhat(datas.getTimestamp("ngay_cap_nhat"));
                 phong.setTrang_thai(datas.getString("trang_thai"));
                 danhSachPhong.add(phong);
             }
@@ -93,27 +95,12 @@ public class PhongDAO {
         p.setFloat(2, phong.getGia_phong());
         p.setString(3, phong.getMo_ta());
         p.setString(4, phong.getTrang_thai());
-        p.setDate(5, (Date) phong.getNgay_them());
-        p.setDate(6, (Date) phong.getNgay_cap_nhat());
+        p.setTimestamp(5,  phong.getNgay_them());
+        p.setTimestamp(6,  phong.getNgay_cap_nhat());
         p.setInt(7, phong.getId());
         int result = p.executeUpdate();// != 0 thì nó là true, 0 thì ko có gì
         return result != 0;// true, flase
     }
      
      
-     public static boolean createRoomByUser(NhanVienPhong nvp) throws SQLException {
-        Connection db = ConnectDB.getConnection();
-        String sql = "INSERT INTO quan_ly_khach_san.Nhan_vien_phong (id_nhan_vien, id_phong, ten_khach_hang, so_cmnd_khach_hang, so_gio_thue, thoi_gian_thue, ghi_chu, thoi_gian_tra_phong) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
-        PreparedStatement p =  db.prepareStatement(sql);
-        p.setInt(1, nvp.getId_nhan_vien());
-        p.setInt(2, nvp.getId_phong());
-        p.setString(3, nvp.getTen_khac_hang());
-        p.setString(4, nvp.getSo_cmnd_khach_hang());
-        p.setInt(5, nvp.getSo_gioi_thue());
-        p.setDate(6, (Date) nvp.getThoi_gian_thue());
-        p.setString(7, nvp.getGhi_chu());
-        p.setDate(8, (Date) nvp.getThoi_gian_tra_phong());
-        int result = p.executeUpdate();// != 0 thì nó là true, 0 thì ko có gì
-        return result != 0;// true, flase
-    }
 }

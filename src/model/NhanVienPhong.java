@@ -5,6 +5,7 @@
 package model;
 
 import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  *
@@ -16,8 +17,8 @@ public class NhanVienPhong {
     private String ten_khac_hang;
     private String so_cmnd_khach_hang;
     private Integer so_gioi_thue;
-    private Date thoi_gian_thue;
-    private Date thoi_gian_tra_phong;
+    private Timestamp thoi_gian_thue;
+    private Timestamp thoi_gian_tra_phong;
     private String ghi_chu;
 
     public String getGhi_chu() {
@@ -68,21 +69,23 @@ public class NhanVienPhong {
         this.so_gioi_thue = so_gioi_thue;
     }
 
-    public Date getThoi_gian_thue() {
+    public Timestamp getThoi_gian_thue() {
         return thoi_gian_thue;
     }
 
-    public void setThoi_gian_thue(Date thoi_gian_thue) {
+    public void setThoi_gian_thue(Timestamp thoi_gian_thue) {
         this.thoi_gian_thue = thoi_gian_thue;
     }
 
-    public Date getThoi_gian_tra_phong() {
+    public Timestamp getThoi_gian_tra_phong() {
         return thoi_gian_tra_phong;
     }
 
-    public void setThoi_gian_tra_phong(Date thoi_gian_tra_phong) {
+    public void setThoi_gian_tra_phong(Timestamp thoi_gian_tra_phong) {
         this.thoi_gian_tra_phong = thoi_gian_tra_phong;
     }
+
+   
     
     
 }

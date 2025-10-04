@@ -5,6 +5,9 @@
 package view;
 
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -18,7 +21,9 @@ public class TrangChu extends javax.swing.JFrame {
      * Creates new form TrangChu
      */
     public TrangChu() {
+  
         initComponents();
+              setLocationRelativeTo(null);    // center form
     }
 
     /**
@@ -33,8 +38,8 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnThoat = new javax.swing.JButton();
         btnQuanLyNhanVien = new javax.swing.JButton();
-        btnQuanLyPhong = new javax.swing.JButton();
-        btnQuanLySanPham = new javax.swing.JButton();
+        btnDatPhong = new javax.swing.JButton();
+        btnQuanLyPhong1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -60,14 +65,19 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnQuanLyPhong.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnQuanLyPhong.setText("Quản lý phòng");
-
-        btnQuanLySanPham.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnQuanLySanPham.setText("Quản lý sản phẩm");
-        btnQuanLySanPham.addActionListener(new java.awt.event.ActionListener() {
+        btnDatPhong.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnDatPhong.setText("Đặt phòng");
+        btnDatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuanLySanPhamActionPerformed(evt);
+                btnDatPhongActionPerformed(evt);
+            }
+        });
+
+        btnQuanLyPhong1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnQuanLyPhong1.setText("Quản lý phòng");
+        btnQuanLyPhong1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyPhong1ActionPerformed(evt);
             }
         });
 
@@ -77,28 +87,25 @@ public class TrangChu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnThoat, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnThoat, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                    .addComponent(btnDatPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                    .addComponent(btnQuanLyPhong1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(btnQuanLyNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                     .addContainerGap()))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btnQuanLyPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btnQuanLySanPham, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(210, 210, 210)
+                .addGap(73, 73, 73)
+                .addComponent(btnQuanLyPhong1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,16 +113,6 @@ public class TrangChu extends javax.swing.JFrame {
                     .addGap(16, 16, 16)
                     .addComponent(btnQuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(443, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(79, 79, 79)
-                    .addComponent(btnQuanLyPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(380, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(150, 150, 150)
-                    .addComponent(btnQuanLySanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(309, Short.MAX_VALUE)))
         );
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -132,13 +129,13 @@ public class TrangChu extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(383, 383, 383)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 888, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(396, 396, 396)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,8 +144,8 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -159,52 +156,89 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
         // TODO add your handling code here:
+         int confirm = JOptionPane.showConfirmDialog(
+                this,
+                "Bạn có chắc muốn thoát ứng dụng?",
+                "Xác nhận thoát",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+        );
+        if (confirm == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }//GEN-LAST:event_btnThoatActionPerformed
 
-    private void btnQuanLySanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLySanPhamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnQuanLySanPhamActionPerformed
-
     private void btnQuanLyNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyNhanVienActionPerformed
-            // TODO add your handling code here:
-            java.awt.EventQueue.invokeLater(() -> {
-                try {
-                    new QuanLyNhanVien().setVisible(true);
-                } catch (SQLException ex) {
-                    System.getLogger(TrangChu.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
-                }
-            });
+       java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new QuanLyNhanVien().setVisible(true);
+                // Ẩn/đóng Trang chủ (chọn 1 trong 2 dòng)
+                // this.setVisible(false);
+                this.dispose();
+            } catch (SQLException ex) {
+                logger.log(java.util.logging.Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this,
+                        "Mở màn hình Quản lý nhân viên thất bại.",
+                        "Lỗi",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
     }//GEN-LAST:event_btnQuanLyNhanVienActionPerformed
+
+    private void btnQuanLyPhong1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyPhong1ActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new QuanLyPhong().setVisible(true);
+                // this.setVisible(false);
+                this.dispose();
+            } catch (SQLException ex) {
+                logger.log(java.util.logging.Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this,
+                        "Mở màn hình Quản lý phòng thất bại.",
+                        "Lỗi",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
+    }//GEN-LAST:event_btnQuanLyPhong1ActionPerformed
+
+    private void btnDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatPhongActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new DatPhong().setVisible(true);
+                // this.setVisible(false);
+                this.dispose();
+            } catch (SQLException ex) {
+                logger.log(java.util.logging.Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this,
+                        "Mở màn hình Đặt phòng thất bại.",
+                        "Lỗi",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
+    }//GEN-LAST:event_btnDatPhongActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+       try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ReflectiveOperationException | UnsupportedLookAndFeelException ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new TrangChu().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDatPhong;
     private javax.swing.JButton btnQuanLyNhanVien;
-    private javax.swing.JButton btnQuanLyPhong;
-    private javax.swing.JButton btnQuanLySanPham;
+    private javax.swing.JButton btnQuanLyPhong1;
     private javax.swing.JButton btnThoat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

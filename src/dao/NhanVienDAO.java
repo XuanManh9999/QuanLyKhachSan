@@ -28,7 +28,6 @@ public class NhanVienDAO {
             String sql = "select * from nhan_vien";
             Statement st = db.createStatement();
             ResultSet datas = st.executeQuery(sql);
-            
            
             while (datas.next()) {
                 NhanVien nhanVien = new NhanVien();
@@ -38,7 +37,8 @@ public class NhanVienDAO {
                 nhanVien.setGioi_tinh(datas.getString("gioi_tinh"));
                 nhanVien.setNgay_sinh(datas.getDate("ngay_sinh"));
                 nhanVien.setSo_cmnd(datas.getString("so_cmnd"));
-                nhanVien.setNgay_vao_lam(datas.getDate("ngay_vao_lam"));
+                nhanVien.setNgay_them(datas.getTimestamp("ngay_them"));
+                nhanVien.setNgay_cap_nhat(datas.getTimestamp("ngay_cap_nhat"));
                 danhSachNhanVien.add(nhanVien);
             }
             return danhSachNhanVien;
@@ -55,7 +55,8 @@ public class NhanVienDAO {
                 nhanVien.setGioi_tinh(datas.getString("gioi_tinh"));
                 nhanVien.setNgay_sinh(datas.getDate("ngay_sinh"));
                 nhanVien.setSo_cmnd(datas.getString("so_cmnd"));
-                nhanVien.setNgay_vao_lam(datas.getDate("ngay_vao_lam"));
+                nhanVien.setNgay_them(datas.getTimestamp("ngay_them"));
+                nhanVien.setNgay_cap_nhat(datas.getTimestamp("ngay_cap_nhat"));
                 danhSachNhanVien.add(nhanVien);
             }
             return danhSachNhanVien;
@@ -65,14 +66,13 @@ public class NhanVienDAO {
     
      public static boolean createNhanVien(NhanVien nhanvien) throws SQLException {
         Connection db = ConnectDB.getConnection();
-        String sql = "INSERT INTO nhan_vien (ho_ten, dia_chi, gioi_tinh, ngay_sinh, so_cmnd, ngay_vao_lam) VALUES(?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO nhan_vien (ho_ten, dia_chi, gioi_tinh, ngay_sinh, so_cmnd) VALUES(?, ?, ?, ?, ?);";
         PreparedStatement p =  db.prepareStatement(sql);
         p.setString(1, nhanvien.getHo_ten());
         p.setString(2, nhanvien.getDia_chi());
         p.setString(3, nhanvien.getGioi_tinh());
         p.setDate(4, (Date) nhanvien.getNgay_sinh());
         p.setString(5, nhanvien.getSo_cmnd());
-        p.setDate(6, (Date) nhanvien.getNgay_vao_lam());
         int result = p.executeUpdate();// != 0 thì nó là true, 0 thì ko có gì
         return result != 0;// true, flase
     }
@@ -89,15 +89,14 @@ public class NhanVienDAO {
      
      public static boolean updateNhanVien(NhanVien nhanvien) throws SQLException {
         Connection db = ConnectDB.getConnection();
-        String sql = "UPDATE nhan_vien SET ho_ten=?, dia_chi=?, gioi_tinh=?, ngay_sinh=?, so_cmnd=?, ngay_vao_lam=? WHERE id=?;";
+        String sql = "UPDATE nhan_vien SET ho_ten=?, dia_chi=?, gioi_tinh=?, ngay_sinh=?, so_cmnd=? WHERE id=?;";
         PreparedStatement p =  db.prepareStatement(sql);
         p.setString(1, nhanvien.getHo_ten());
         p.setString(2, nhanvien.getDia_chi());
         p.setString(3, nhanvien.getGioi_tinh());
         p.setDate(4, (Date) nhanvien.getNgay_sinh());
         p.setString(5, nhanvien.getSo_cmnd());
-        p.setDate(6, (Date) nhanvien.getNgay_vao_lam());
-        p.setInt(7, nhanvien.getId());
+        p.setInt(6, nhanvien.getId());
         int result = p.executeUpdate();// != 0 thì nó là true, 0 thì ko có gì
         return result != 0;// true, flase
     }

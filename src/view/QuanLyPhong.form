@@ -37,45 +37,43 @@
                           <Component id="jLabel4" min="-2" pref="61" max="-2" attributes="0"/>
                           <Component id="btnThem" min="-2" pref="102" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtTenPhong" max="32767" attributes="0"/>
-                                  <Component id="cbTrangThai" pref="239" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Component id="btnXoa" min="-2" pref="96" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="btnSua" min="-2" pref="103" max="-2" attributes="0"/>
-                              <EmptySpace pref="18" max="32767" attributes="0"/>
-                              <Component id="btnDatPhong" min="-2" pref="103" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtTenPhong" max="32767" attributes="0"/>
+                              <Component id="cbTrangThai" pref="239" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" pref="79" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" min="-2" pref="59" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="txtGiaPhong" max="32767" attributes="0"/>
                                   <Component id="jScrollPane2" pref="262" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="txtTimKiem" min="-2" pref="192" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnTimKiem" min="-2" pref="84" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnReset" min="-2" pref="84" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jButton1" max="32767" attributes="0"/>
+                                  <Component id="btnReset" pref="84" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="70" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -118,18 +116,17 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtTimKiem" alignment="1" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnThem" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btnXoa" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btnSua" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btnTimKiem" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="btnReset" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="btnDatPhong" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnThem" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnXoa" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnSua" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnTimKiem" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="btnReset" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtTimKiem" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="403" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -144,7 +141,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Gi&#xe1; ph&#xf2;ng"/>
+        <Property name="text" type="java.lang.String" value="Gi&#xe1; ph&#xf2;ng/gi&#x1edd;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -168,7 +165,7 @@
               <Table columnCount="7" rowCount="0">
                 <Column editable="true" title="Id" type="java.lang.Object"/>
                 <Column editable="true" title="T&#xea;n ph&#xf2;ng" type="java.lang.Object"/>
-                <Column editable="true" title="Gi&#xe1; ph&#xf2;ng" type="java.lang.Object"/>
+                <Column editable="true" title="Gi&#xe1; ph&#xf2;ng/gi&#x1edd;" type="java.lang.Object"/>
                 <Column editable="true" title="M&#xf4; t&#x1ea3;" type="java.lang.Object"/>
                 <Column editable="true" title="Tr&#x1ea1;ng th&#xe1;i" type="java.lang.Object"/>
                 <Column editable="true" title="Ng&#xe0;y th&#xea;m" type="java.lang.Object"/>
@@ -269,12 +266,12 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnDatPhong">
+    <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x110;&#x1eb7;t ph&#xf2;ng"/>
+        <Property name="text" type="java.lang.String" value="Tr&#x1edf; l&#x1ea1;i"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDatPhongActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

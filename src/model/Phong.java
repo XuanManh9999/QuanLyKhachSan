@@ -5,6 +5,7 @@
 package model;
 
 import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  *
@@ -16,8 +17,8 @@ public class Phong {
     private Float gia_phong;
     private String mo_ta;
     private String trang_thai;
-    private Date ngay_them;
-    private Date ngay_cap_nhat;
+    private Timestamp ngay_them;
+    private Timestamp ngay_cap_nhat;
 
     public Integer getId() {
         return id;
@@ -59,20 +60,22 @@ public class Phong {
         this.trang_thai = trang_thai;
     }
 
-    public Date getNgay_them() {
+    public Timestamp getNgay_them() {
         return ngay_them;
     }
 
-    public void setNgay_them(Date ngay_them) {
+    public void setNgay_them(Timestamp ngay_them) {
         this.ngay_them = ngay_them;
     }
 
-    public Date getNgay_cap_nhat() {
+    public Timestamp getNgay_cap_nhat() {
         return ngay_cap_nhat;
     }
 
-    public void setNgay_cap_nhat(Date ngay_cap_nhat) {
+    public void setNgay_cap_nhat(Timestamp ngay_cap_nhat) {
         this.ngay_cap_nhat = ngay_cap_nhat;
     }
+
+   
     
 }
